@@ -1,6 +1,6 @@
-<p>更新</p>
+<p>編集</p>
 <%= form_with model: @discount, url: "/discounts/#{@discount.id}", method: :patch, local: true do |f| %>
-  <p><%= f.text_field :price %></p>
-  <p><%= f.text_field :rate %></p>
+  <p>元値：<%= f.text_field :price %></p>
+  <p>割引率（％）：<%= f.text_field :rate %></p>
   <%= f.submit "計算" %>
 <% end %>
