@@ -9,6 +9,7 @@ class DiscountsController < ApplicationController
   end
 
   def create
+    # ビューで入力値と計算結果を表示するため、インスタンス変数を定義
     @discount = Discount.create(discount_params)
   end
 
