@@ -1,5 +1,5 @@
-<h1>新規価格計算</h1>
-<%= form_with model: @discount, url: "/discounts", method: :post, local: true do |f| %>
+<p>編集</p>
+<%= form_with model: @discount, url: "/discounts/#{@discount.id}", method: :patch, local: true do |f| %>
   <p>元値：<%= f.text_field :price %></p>
   <p>割引率（％）：<%= f.text_field :rate %></p>
   <%= f.submit "計算" %>
