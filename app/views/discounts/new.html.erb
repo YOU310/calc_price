@@ -1,4 +1,5 @@
 <h1>新規価格計算</h1>
+<p>※元値と割引率を入力すると、割引後の値段を計算するアプリです※</p>
 <%= form_with model: @discount, url: "/discounts", method: :post, local: true do |f| %>
   <p>元値：<%= f.text_field :price %></p>
   <p>割引率（％）：<%= f.text_field :rate %></p>
