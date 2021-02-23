@@ -1,0 +1,8 @@
+<%= link_to "入力画面へ", "/discounts/new" %>
+<% @discounts.each do |discount| %>
+  <p>
+    <%= discount.price %>
+    <%= discount.rate %>
+    <%= link_to '削除', "/discounts/#{discount.id}", method: :delete, data: {confirm: "削除しますか?"}  %>
+  </p>
+<% end %>
